@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Aqui se aplican los estilos, esta es un forma, pero no es la recomendada -->
+    <style>
+        h1{
+            text-align: center;
+        }
+        body {
+            background-color: #fff3b2;
+            font-family:Arial, Helvetica, sans-serif
+        }
+        .btn-yellow, .btn-blue, .btn-red {
+            width: 90px;
+            height: 40px;
+            font-size: 1rem;
+        }
+        .btn-yellow {
+            background-color: yellow;
+        }
+        .btn-blue {
+            background-color: blue;
+            color: white
+        }
+        .container-btn {
+            display: flex;
+            justify-content: space-around; 
+        }
+    </style>
+</head>
+<!-- Dentro del body ba todo lo que quiero ver en pantalla -->
+<body>
+    <h1>Cambia color</h1>
+    <p>Este programa sirve para cambiar de color el fondo de pantalla.</p>
+    <p>El programa funciona haci, tienes tres botones, que contienen la funcion de pintar el color: amarillo, azul y rojo</p>
+   <div class="container-btn">
+    <button class='btn-yellow'>Amarillo</button>
+    <button class='btn-blue'>Azul</button>
+    <button class='btn-red'>Rojo</button>
+   </div>
+</body>
+</html>
