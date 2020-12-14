@@ -6,11 +6,14 @@
     <title>Document</title>
     <!-- Aqui se aplican los estilos, esta es un forma, pero no es la recomendada -->
     <style>
+        .container {
+            margin: 1rem
+        }
         h1{
             text-align: center;
         }
         body {
-            background-color: #fff3b2;
+            background-color: #17A589 ;
             font-family:Arial, Helvetica, sans-serif
         }
         .btn-yellow, .btn-blue, .btn-red {
@@ -25,21 +28,64 @@
             background-color: blue;
             color: white
         }
+        .btn-red {
+            background-color: red;
+            color: white
+        }
         .container-btn {
             display: flex;
-            justify-content: space-around; 
+            justify-content: space-around 
+        }
+        p {
+            font-size: 18px
         }
     </style>
 </head>
 <!-- Dentro del body ba todo lo que quiero ver en pantalla -->
 <body>
-    <h1>Cambia color</h1>
-    <p>Este programa sirve para cambiar de color el fondo de pantalla.</p>
-    <p>El programa funciona haci, tienes tres botones, que contienen la funcion de pintar el color: amarillo, azul y rojo</p>
+    <div class="container">
+        <h1 id='title'>Cambia color</h1>
+    <div id="html-p">
+        <p>Este programa sirve para cambiar de color el fondo de pantalla.</p>
+    <p>El programa funciona haci: tienes tres botones de diferente color, solo debes elejir uno y el fondo de pantalla cambiara de color</p>
+    </div>
    <div class="container-btn">
-    <button class='btn-yellow'>Amarillo</button>
-    <button class='btn-blue'>Azul</button>
-    <button class='btn-red'>Rojo</button>
+    <button class='btn-yellow '>Amarillo</button>
+    <button class='btn-blue '>Azul</button>
+    <button class='btn-red '>Rojo</button>
    </div>
+    </div>
+    <!-- Esta parte es java script, usado para la interacción -->
+    <script>
+        const title = document.querySelector('#title')
+        const htmlP = document.querySelector('#html-p')
+
+        /* Este es el boton amarillo */
+        const btnYellow = document.querySelector('.btn-yellow')
+
+        btnYellow.addEventListener('click', () => {
+            document.body.style.background = 'yellow'
+            htmlP.style.color = 'black'
+            title.style.color = 'black'
+
+        })
+
+        /* Este es el boton azul */
+        const btnBlue = document.querySelector('.btn-blue')
+
+        btnBlue.addEventListener('click', () => {
+            document.body.style.backgroundColor = 'blue'
+            htmlP.style.color = 'white'
+            title.style.color = 'white'
+
+        })
+
+        /* Este es el boton rojo */
+        const btnRed = document.querySelector('.btn-red')
+
+        btnRed.addEventListener('click', () => {
+            document.body.style.backgroundColor = 'red'
+        })
+</script>
 </body>
 </html>
